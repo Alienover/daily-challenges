@@ -32,11 +32,6 @@ jobs:
         run: |
           python3 -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi;
-      
-      - name: Set work path to PYTHONPATH
-        run: |
-          ls -al
-          echo ::set-env name=PYTHONPATH::$(pwd)
 
       # Runs a single command using the runners shell
       - name: Crawl daily challenge from leetcode.com
