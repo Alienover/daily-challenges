@@ -35,8 +35,8 @@ jobs:
       
       - name: Set work path to PYTHONPATH
         run: |
-          pwd
-          exit 1
+          ls -al
+          echo ::set-env name=PYTHONPATH::$(pwd)
 
       # Runs a single command using the runners shell
       - name: Crawl daily challenge from leetcode.com
