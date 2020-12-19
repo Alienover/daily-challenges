@@ -1,5 +1,8 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" style="font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; box-sizing: border-box;" xml:lang="en">
   <header>
+    <meta http-equiv="Content-Type" content="text/html; charset="utf-8" />
+    <meta name="viewport" content="width=3Ddevice-width" />
     <style>
       *, *::before, *::after {
         -webkit-box-sizing: border-box;
@@ -23,62 +26,44 @@
         background-color: #f9f2f4;
         border-radius: 4px;
       }
-      .container {
-        width: '100%';
-        height: '100%';
-        background: #fafafa;
-        line-height: 24px;
-      }
-      .title {
-        padding: 35px 20px 15px 20px;
-        margin: 0;
-      }
-      .title > a {
-        font-size: 14px;
-        padding: 0 10px;
-      }
-      .question-area {
-        padding: 20px;
-      }
-      .question-detail {
-        padding: 20px;
-        border-radius: 15px;
-        background: white;
-      }
-      .url-container {
-        text-align: center;
-        padding-bottom: 35px;
-      }
-      .original-url {
-        width: 250px;
-        display: block;
-        margin: auto;
-        padding: 10px;
-        background: #136AEE;
-        color: white;
-        font-weight: bold;
-        border-radius: 15px;
-        text-align: center;
-        text-decoration: none!important;
-      }
     </style>
   </header>
   <body>
-    <div class="container">
-      <h2 class="title">
-        $title
-        <a class="link" href="$problem_url" target="__blank">
-            [Link]
-        </a>
-      </h2>
-      <div class="question-area">
-        <div class="question-detail">$content</div>
-      </div>
-      <div class="url-container">
-        <a class="original-url" href="$challenge_url" target="__blank">
-            Go and submit your answer
-        </a>
-      </div>
+    <div style="box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;font-size:14px;line-height:1.5;color:#24292e;background-color:#fafafa;margin:0">
+      <table align="center" width="100%" style="box-sizing:border-box;border-spacing:0;border-collapse:collapse;max-width:544px;margin-right:auto;margin-left:auto;width:100%!important;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji!important">
+        <tbody>
+          <tr>
+            <td style="box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji!important;padding:16px">
+              <h2>$title</h2>
+            </td>
+            <td width="100%">
+              <a href="$problem_url" target="_blank" style="font-size: 14px; outline: none;">
+                <b>[Link]</b>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table align="center" width="100%" style="box-sizing:border-box;border-spacing:0;border-collapse:collapse;max-width:544px;margin-right:auto;margin-left:auto;width:100%!important;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji!important">
+        <tbody>
+          <tr>
+            <td style="box-sizing:border-box;display:block!important;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji!important;padding:20px;background-color:white;border-radius:15px;">
+              $content
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%" style="box-sizing:border-box;border-spacing:0;border-collapse:collapse;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji!important">
+        <tbody>
+          <tr>
+            <td align="center" style="box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji!important;padding:25px;">
+              <a href="$challenge_url" target="_blank" style="outline:none;background-color:#136AEE!important;box-sizing:border-box;color:#fff;text-decoration:none;display:inline-block;font-size:inherit;font-weight:bold;line-height:1.5;white-space:nowrap;vertical-align:middle;border-radius:15px;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji!important;padding:.75em 1.5em;">
+                Go and submit your answer
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </body>
 </html>
