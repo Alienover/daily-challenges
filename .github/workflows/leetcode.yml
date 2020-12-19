@@ -1,9 +1,11 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Daily Challenge - leetcode.com
 
 # Controls when the action will run. 
 on:
+  schedule:
+    - cron: "0 10 * * *"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -37,7 +39,7 @@ jobs:
         env:
           USERNAME: ${{ secrets.LEETCODE_USERNAME }}
           PASSWORD: ${{ secrets.LEETCODE_PASSWORD }}
-        run: echo ::set-output name=FILENAME::$(echo "test-filename.json")
+        run: echo ::set-output name=FILENAME::$(python3 index.py --mode crawl -u $USERNAME -p $PASSWORD)
 
       # Runs a set of commands using the runners shell
       - name: Send email
@@ -47,4 +49,4 @@ jobs:
           PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           SENDER: ${{ secrets.EMAIL_SENDER }}
           RECEIVERS: ${{ secrets.EMAIL_RECEIVERS }}
-        run: echo ${{ steps.crawl.outputs.FILENAME }}
+        run: python3 index.py --mode email --host $HOST -u $USERNAME -p $PASSWORD -s $SENDER -r $RECEIVERS -f ${{ steps.crawl.outputs.FILENAME }}
