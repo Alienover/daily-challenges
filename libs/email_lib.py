@@ -41,7 +41,7 @@ class EmailCLI(object):
             raise Exception('Invalid email body')
 
         to =  ','.join(receivers) if type(receivers) is list else receivers
-        mime = MIMEText("{0}".format(message), 'text/html', 'utf-8')
+        mime = MIMEText("{0}".format(message), 'html', 'utf-8')
         mime["Subject"] = Header(subject, 'utf-8')
         mime["From"] = sender
         mime["To"] = receivers
