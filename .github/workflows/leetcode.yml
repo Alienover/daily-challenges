@@ -49,4 +49,4 @@ jobs:
           PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           SENDER: ${{ secrets.EMAIL_SENDER }}
           RECEIVERS: ${{ secrets.EMAIL_RECEIVERS }}
-        run: python3 index.py --mode email --host $HOST -u $USERNAME -p $PASSWORD -s $SENDER -r $RECEIVERS -f ${{ steps.crawl.outputs.FILENAME }}
+        run: python3 index.py --mode email --host $HOST -u $USERNAME -p $PASSWORD -s "$SENDER" -r "$RECEIVERS" -f "${{ steps.crawl.outputs.FILENAME }}"
