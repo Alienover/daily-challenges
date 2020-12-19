@@ -5,7 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from datetime import datetime
-from lib.webdriver import init_webdriver
+from libs.webdriver import init_webdriver
 from utils import mask_secret, kebab_case, setup_logger
 import os
 import logging

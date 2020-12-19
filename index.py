@@ -7,7 +7,7 @@ import logging
 import settings
 from datetime import datetime
 from optparse import OptionParser
-from lib.email_lib import EmailCLI
+from libs.email_lib import EmailCLI
 from crawlers.leetcode import Leetcode
 from utils import kebab_case, setup_logger
 
