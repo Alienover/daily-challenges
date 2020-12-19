@@ -34,12 +34,14 @@
         <tbody>
           <tr>
             <td style="box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji!important;padding:16px">
-              <h2>$title</h2>
-            </td>
-            <td width="100%">
-              <a href="$problem_url" target="_blank" style="font-size: 14px; outline: none;">
-                <b>[Link]</b>
-              </a>
+              <h2>
+                $title
+                <span style="padding: 0 10px;">
+                  <a href="$problem_url" target="_blank" style="font-size: 14px; outline: none;display: inline;">
+                    <b>[Link]</b>
+                  </a>
+                </span>
+              </h2>
             </td>
           </tr>
         </tbody>
