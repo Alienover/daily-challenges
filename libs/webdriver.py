@@ -14,6 +14,6 @@ def init_webdriver():
     if 'darwin' in sys.platform:
         platform = 'mac'
 
-    driver_path = os.path.join(os.getcwd(), 'lib', driver_names.get(platform))
+    driver_path = os.path.join(os.getcwd(), 'libs', driver_names.get(platform))
 
     return webdriver.Chrome(executable_path=driver_path)

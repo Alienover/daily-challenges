@@ -69,7 +69,7 @@ if __name__ == "__main__":
     parser.add_option("--filename", "-f")
     parser.add_option("--username", "-u")
     parser.add_option("--password", "-p")
-    parser.add_option("--sender" "-s")
+    parser.add_option("--sender", "-s")
     parser.add_option("--receivers", "-r")
 
     (options, args) = parser.parse_args()
