@@ -48,7 +48,7 @@ class DailyChallenge:
             with open(filename, 'r') as inputfile:
                 data = json.load(inputfile)
         except Exception as e:
-            loging.error('Failed to load message parameters from [%s] %s' % (filename, e))
+            logging.error('Failed to load message parameters from [%s] %s' % (filename, e))
             sys.exit(1)
 
         email_body = EmailCLI.parse_email_template(settings.templates["LEETCODE_DAILY"], data)
