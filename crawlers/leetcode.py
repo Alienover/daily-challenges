@@ -15,7 +15,7 @@ setup_logger()
 class Leetcode(object):
     LOGIN_URL = 'https://leetcode.com/accounts/login/'
     PROBLEM_URL = 'https://leetcode.com/problems/%s'
-    DAILY_CHALLENGE_URL = 'https://leetcode.com/explore/featured/card/%s-leetcoding-challenge'
+    DAILY_CHALLENGE_URL = 'https://leetcode.com/explore/featured/card/%s-leetcoding-challenge-%s'
 
     TIMEOUT = 30
     def __init__(self, username, password):
@@ -72,8 +72,9 @@ class Leetcode(object):
         return False
 
     def navigate_to_challenge(self, index):
+        curr_year = datetime.now().strftime("%Y")
         curr_month = datetime.now().strftime('%B').lower()
-        url = self.DAILY_CHALLENGE_URL % curr_month
+        url = self.DAILY_CHALLENGE_URL % (curr_month, curr_year)
         self.broswer.get(url)
         logging.info('Loading daily challenge page url[%s]' % url)
 
